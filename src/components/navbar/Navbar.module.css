@@ -1,0 +1,73 @@
+/* Navigation Bar */
+.navbar{
+    /* background-image: linear-gradient(#3072ff,#704fff,#c024ff); */
+    background-color: #745be4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:3px 3px 3px rgb(38, 38, 38);
+    position: sticky;
+    top:0;
+    z-index: 1000;
+}
+
+.navIcon_container{
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    margin-top: 0.2rem;
+    cursor: pointer;
+}
+
+.navIcon{
+    height:4rem;
+    width: 8rem;
+}
+
+.navIcon_container h1{
+    font-size: 1.5rem;
+    margin-left: -10%;
+    color: azure;
+}
+
+.navIcon_container:hover{
+    transform: scale(0.9);
+    transition: 0.4s ease-in-out;
+}
+
+.navIcon_container:hover h1{
+    color: black;
+}
+
+.themeIcon_container{
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.themeIcon_container h1{
+    font-size: 1.2rem;
+    margin-right: 0.2rem;
+    color: azure;
+    font-weight: 500;
+}
+
+.nav_themeIcon{
+    height: 3rem;
+    border-radius: 50%;
+    box-shadow: inset 0 0 100px rgb(49, 48, 48);
+}
+
+.themeIcon_container:hover{
+    transform: scale(0.9);
+    transition: 0.4s ease-in-out;
+}
+
+.themeIcon_container:hover h1{
+    color: black;
+}
+
+.themeIcon_container:hover .nav_themeIcon{
+    box-shadow: inset 0 0 100px white;
+}

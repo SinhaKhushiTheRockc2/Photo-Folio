@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// Import statements
+import { useContextValues } from "./photoContext";
+import AlbumList from "./components/album/AlbumList";
+import NavBar from "./components/navbar/Navbar";
+import { ToastContainer } from "react-toastify";
+import ImageList from "./components/image/ImageList";
+import Carousel from "./components/image/Carousel";
 
 function App() {
+  const{theme,currentView,selectedAlbum,showCarousel}=useContextValues();
+  console.log(theme);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div  className={theme}>
+        <NavBar />
+        <ToastContainer/>
+        {currentView==='albumList'&&<AlbumList />}
+        {currentView==='imageList' && selectedAlbum && <ImageList album={selectedAlbum}/>}
+        {showCarousel?<Carousel/>:undefined}
+      </div>
   );
 }
 
