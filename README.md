@@ -1,6 +1,9 @@
 # PhotoFolio - React
 Developed a PhotoFolio project using React that allows users to create albums and add or remove images from those albums. The project uses Firebase for backend database management.
 
+## Hosted Link
+https://sinhakhushitherockc2.github.io/Photo-Folio/
+
 ## Features:
 * Add Album: Click on the "Add Album" button to open a form. Fill out the form and click "Create" to add a new album to your collection.
 * View Albums: Click on any album to navigate to a page where you can manage the images within that album.
